@@ -20,7 +20,7 @@ interactive command-line interface (entry point).
 10. [Analytics](#analytics)
 11. [Running the Tests](#running-the-tests)
 12. [Module Reference](#module-reference)
-
+13. [Troubleshooting](#trouble-shooting)
 ---
 
 ## Project Structure
@@ -449,7 +449,8 @@ docker run -it habit-tracker --seed   # pre-populate with 5 sample habits
 ### Seed data shows stale dates or current streak is 0
 
 The seed data anchors all completions to today's date at runtime. In some cases, If you ran
-`--seed` on a previous date, the database still holds those old completions.
+`--seed` on a previous date, the database still holds those old completions. This approach 
+can be applied as well in case you want to delete the database and start from 0.
 
 **Without Docker — delete the local database and reseed:**
 ```bash

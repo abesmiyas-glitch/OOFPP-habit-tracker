@@ -1,0 +1,27 @@
+# ─── Database ────────────────────────────────────────────────────────────────
+# Never commit a local database — it contains stale seed dates and/or real
+# user data. Anyone cloning the project should generate their own via --seed.
+habits.db
+data/
+
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# ─── Virtual environments ────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ─── OS files ────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── IDE ─────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/

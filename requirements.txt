@@ -1,0 +1,13 @@
+# Habit Tracker — Python dependencies
+#
+# Install with:
+#   pip install -r requirements.txt
+#
+# The application core uses only the Python standard library.
+# The two packages below are the only external dependencies.
+
+# Beautiful terminal UI — tables, panels, coloured text, styled prompts
+rich>=13.0
+
+# Test runner (optional — the suite also runs with built-in unittest)
+pytest>=7.0

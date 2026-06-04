@@ -20,7 +20,7 @@ interactive command-line interface (entry point).
 10. [Analytics](#analytics)
 11. [Running the Tests](#running-the-tests)
 12. [Module Reference](#module-reference)
-13. [Troubleshooting](#trouble-shooting)
+13. [Troubleshooting](#troubleshooting)
 ---
 
 ## Project Structure

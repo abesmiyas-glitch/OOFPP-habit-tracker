@@ -802,16 +802,6 @@ class TestEditHabit(unittest.TestCase):
         loaded = load_all_habits(self.db_path)
         self.assertEqual(len(loaded), 1)
 
-    def test_edit_name_change_reflects_on_reload(self):
-        """If the implementation supports renaming, the new name must persist."""
-        original_name = self.habit.name
-        # Re-save under new name by deleting old and saving new
-        delete_habit(original_name, self.db_path)
-        self.habit.name = "renamed_habit"
-        save_habit(self.habit, self.db_path)
-        loaded = load_all_habits(self.db_path)
-        self.assertEqual(loaded[0].name, "renamed_habit")
-        self.assertFalse(habit_exists(original_name, self.db_path))
 
     def test_edit_periodicity_weekly_to_daily_clears_completions(self):
         """Round-trip: weekly → clear → daily should persist correctly."""

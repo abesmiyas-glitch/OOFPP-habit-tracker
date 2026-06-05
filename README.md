@@ -17,9 +17,10 @@ interactive command-line interface (entry point).
 7. [Creating Habits](#creating-habits)
 8. [Editing a Habit](#editing-a-habit)
 9. [Completing a Task](#completing-a-task)
-10. [Running the Tests](#running-the-tests)
-11. [Module Reference](#module-reference)
-12. [Troubleshooting](#troubleshooting)
+10. [Analytics](#analytics)
+11. [Running the Tests](#running-the-tests)
+12. [Module Reference](#module-reference)
+13. [Troubleshooting](#troubleshooting)
 ---
 
 ## Project Structure

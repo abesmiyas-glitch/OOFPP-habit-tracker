@@ -17,10 +17,9 @@ interactive command-line interface (entry point).
 7. [Creating Habits](#creating-habits)
 8. [Editing a Habit](#editing-a-habit)
 9. [Completing a Task](#completing-a-task)
-10. [Analytics](#analytics)
-11. [Running the Tests](#running-the-tests)
-12. [Module Reference](#module-reference)
-13. [Troubleshooting](#troubleshooting)
+10. [Running the Tests](#running-the-tests)
+11. [Module Reference](#module-reference)
+12. [Troubleshooting](#troubleshooting)
 ---
 
 ## Project Structure
@@ -389,48 +388,6 @@ Test areas covered:
 
 ---
 
-## Module Reference
-
-### `habit.py` — `Habit` class
-
-| Method / Attribute | Description |
-|---|---|
-| `Habit(name, description, periodicity, created_at=None)` | Create a new habit |
-| `.complete(when=None)` | Record a completion; defaults to now |
-| `.completed_periods()` | Sorted list of unique period keys with a completion |
-| `.current_streak()` | Consecutive-period streak ending today/this week |
-| `.longest_streak()` | Best-ever consecutive-period streak |
-| `.to_dict()` | Serialise to a plain dict |
-| `Habit.from_dict(data)` | Deserialise from a dict |
-
-### `analytics.py` — functional analytics
-
-All functions are pure (no side effects).
-
-| Function | Returns |
-|---|---|
-| `get_all_habits(habits)` | List of all habits |
-| `get_habits_by_periodicity(habits, period)` | Filtered list |
-| `get_longest_streak_all(habits)` | `(Habit, int)` best streak pair |
-| `get_longest_streak_for_habit(habit)` | `int` longest streak |
-| `get_struggle_habits(habits, since=None)` | `[(Habit, int)]` sorted by missed periods |
-| `habit_summary(habit)` | `dict` with key stats |
-
-### `storage.py` — SQLite persistence
-
-| Function | Description |
-|---|---|
-| `initialise_db(db_path)` | Create tables if they don't exist |
-| `save_habit(habit, db_path)` | Insert or update a habit + completions |
-| `load_all_habits(db_path)` | Return all habits with completions |
-| `delete_habit(name, db_path)` | Delete a habit; returns `bool` |
-| `habit_exists(name, db_path)` | Check existence; returns `bool` |
-
-### `seed_data.py` — fixture data
-
-| Function | Description |
-|---|---|
-| `seed_database(db_path, overwrite=False)` | Insert 5 predefined habits; returns list of inserted names |
 
 ### `cli.py` — command-line interface
 
